@@ -1,6 +1,7 @@
 import styles from './Header.module.scss'
 import {Logo} from "@/components/atoms/icons/Logo";
 import {Nav} from "@/components/molecules/Nav/Nav";
+import Link from "next/link";
 
 
 export const Header = () => {
@@ -8,9 +9,9 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
+        <Link href='/' className={styles.logo}>
           <Logo height={45} width={100} />
-        </div>
+        </Link>
         <Nav />
       </div>
     </header>
