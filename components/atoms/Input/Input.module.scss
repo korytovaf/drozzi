@@ -1,0 +1,30 @@
+@import "../../../styles/vars.module";
+
+.input_wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 56px;
+  border-bottom: 1px solid $color-font-grey-lite;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  color: $color-font-grey-lite;
+  font-size: 24px;
+  transition: all .2s ease-in-out;
+}
+
+.input {
+  width: 100%;
+  height: 32px;
+
+  &:focus + label {
+    font-size: 14px;
+  }
+
+  &:not(:placeholder-shown) + label {
+    font-size: 14px;
+  }
+}

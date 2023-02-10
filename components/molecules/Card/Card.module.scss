@@ -1,0 +1,36 @@
+@import "../../../styles/vars.module";
+
+.card {
+  width: 100%;
+  cursor: pointer;
+}
+
+.card_img {
+  display: flex;
+  padding: 16px;
+  align-items: flex-end;
+  height: 513px;
+  background: linear-gradient(90deg, #A18CD1 0%, #FBC2EB 100%),
+              linear-gradient(0deg, #EEEEEE, #EEEEEE);
+  border-radius: 8px;
+}
+
+.card_title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card_description {
+  font-size: 18px;
+  color: $color-font-grey;
+}
+
+.card_teg {
+  padding: 0 10px;
+  text-transform: uppercase;
+  background-color: $color-font-main;
+  border-radius: 32px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-font-invert;
+}

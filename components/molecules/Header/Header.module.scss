@@ -1,0 +1,32 @@
+@import "../../../styles/vars.module";
+
+.header {
+  background-color: $color-gray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 93px;
+  margin: 0 auto;
+  padding: 24px 32px;
+
+  @media (max-width: $media-md) {
+    padding: 24px 16px;
+  }
+}
+
+.logo {
+  margin-right: auto;
+  z-index: 2;
+
+  svg {
+    fill: $color-accent;
+  }
+}

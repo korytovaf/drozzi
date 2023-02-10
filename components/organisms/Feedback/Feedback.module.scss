@@ -1,0 +1,87 @@
+@import "../../../styles/vars.module";
+
+.feedback_container {
+  max-width: $media-xl;
+  width: 100%;
+  margin: 0 auto;
+  padding: 57px 32px;
+}
+
+.feedback_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $media-md) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.feedback_content {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:  'manager form'
+                        'brief form';
+  row-gap: 70px;
+  padding-top: 32px;
+
+  @media (max-width: $media-md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:  'manager'
+                          'form'
+                          'brief';
+    row-gap: 20px;
+  }
+}
+
+.feedback_manager {
+  grid-area: manager;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback_form {
+  grid-area: form;
+}
+
+.feedback_manager_name {
+  margin-top: 32px;
+}
+
+.feedback_manager_phrase {
+  font-size: 18px;
+  color: $color-font-grey;
+}
+
+.feedback_brief {
+  grid-area: brief;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+.feedback_brief_title {
+  margin-bottom: 16px;
+}
+
+.feedback_brief_link {
+  display: flex;
+  column-gap: 6px;
+  line-height: 30px;
+  font-size: 18px;
+  color: $color-accent;
+  border-bottom: 1px solid $color-accent-04;
+  padding-bottom: 4px;
+
+  &:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+
+  svg {
+    fill: $color-accent-04;
+  }
+}

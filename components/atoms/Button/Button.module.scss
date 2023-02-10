@@ -1,0 +1,37 @@
+@import "../../../styles/vars.module";
+
+.button {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all .2s ease-in-out;
+
+  &:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+  }
+}
+
+.isVisible {
+  display: none;
+}
+
+.button_transition {
+  background-color: $color-font-invert;
+  color: $color-accent;
+  border: 1px solid $color-accent;
+  &:hover {
+    background-color: $color-accent;
+    color: $color-font-invert;
+  }
+}
+
+.button_default {
+  background-color: $color-accent;
+  color: $color-font-invert;
+}

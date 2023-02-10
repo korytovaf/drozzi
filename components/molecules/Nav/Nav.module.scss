@@ -1,0 +1,81 @@
+@import "../../../styles/vars.module";
+
+.nav {
+  display: flex;
+  z-index: 1;
+
+  @media (max-width: $media-md) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    left: -100%;
+    opacity: 0;
+    //visibility: hidden;
+    background-color: #ffffff;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.nav_active {
+  left: 0;
+  opacity: 1;
+  //visibility: visible;
+  z-index: 1;
+}
+
+.nav_list {
+  display: flex;
+  @media (max-width: $media-md) {
+    flex-direction: column;
+    padding-top: 103px;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 32px;
+  transition: color 0.1s ease-in-out, scale 0.1s ease-in-out;
+  &:hover {
+    color: $color-accent;
+  }
+
+  a:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+
+
+  @media (max-width: $media-md) {
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+}
+
+.link_application {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 50px;
+  background-color: $color-accent;
+  color: $color-font-invert;
+  font-weight: 500;
+
+  &:hover {
+    color: $color-font-invert;
+    scale: 1.03;
+  }
+
+  a:focus-visible {
+    box-shadow: 0 0 11px 10px $color-accent;
+    scale: 1.1;
+    border-radius: 30px;
+  }
+
+
+  @media (max-width: $media-md) {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../../styles/vars.module";
+
+.burger_btn {
+  display: none;
+  position: relative;
+  align-items: center;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  z-index: 2;
+
+  span,
+  span::before,
+  span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition-duration: .1s;
+  }
+  span::before {
+    content: '';
+    top: -8px;
+  }
+  span::after {
+    content: '';
+    top: 8px;
+  }
+
+  @media (max-width: $media-md) {
+    display: flex;
+  }
+}
+
+.burger_btn_active > span {
+  transform: rotate(45deg);
+}
+
+.burger_btn_active > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+.burger_btn_active > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}

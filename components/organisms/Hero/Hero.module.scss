@@ -1,0 +1,102 @@
+@import "../../../styles/vars.module";
+
+.hero {
+  position: relative;
+  margin-top: 93px;
+}
+
+.hero_wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  max-width: $media-xl;
+  width: 100%;
+  height: calc(100vh - 93px);
+  max-height: 1024px;
+  padding: 32px;
+  margin: 0 auto;
+
+  @media (max-width: $media-md) {
+    padding: 0 16px 32px;
+  }
+}
+
+.hero_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 93px);
+  max-height: 1024px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero_slogan {
+  grid-column: 1/-1;
+  width: 210px;
+  line-height: 150%;
+}
+
+.header {
+  font-size: 16px;
+}
+
+.hero_arrow {
+  grid-column: 2/2;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+
+  svg {
+    transition: all .1s ease-in-out;
+    fill: #8D959D;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-accent;
+    }
+  }
+
+  button:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+}
+
+.hero_messengers {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  column-gap: 32px;
+}
+
+.hero_link_wrapper {
+  display: flex;
+  column-gap: 10px;
+  fill: #8D959D;
+  transition: all .1s ease-in-out;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color-accent;
+    fill: $color-accent;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+
+  svg {
+    height: 20px;
+
+    @media (max-width: $media-md) {
+      height: 40px;
+    }
+  }
+
+  span {
+    @media (max-width: $media-md) {
+      display: none;
+    }
+  }
+}

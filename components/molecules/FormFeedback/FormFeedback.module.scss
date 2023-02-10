@@ -1,0 +1,27 @@
+@import "../../../styles/vars.module";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+  max-width: 562px;
+}
+
+.form_btn {
+  @media (max-width: $media-md) {
+    display: flex;
+
+    button {
+      font-size: 24px;
+      height: 68px;
+      width: 100%;
+    }
+  }
+
+}

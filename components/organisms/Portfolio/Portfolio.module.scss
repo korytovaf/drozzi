@@ -1,0 +1,74 @@
+@import "../../../styles/vars.module";
+
+.portfolio {
+  //background-color: $color-gray;
+}
+
+.portfolio_container {
+  max-width: $media-xl;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 32px 0;
+}
+
+.portfolio_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $media-md) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.portfolio_header_btn {
+  display: flex;
+  column-gap: 10px;
+  text-transform: uppercase;
+  color: $color-accent;
+  height: auto;
+  transition: all .03s ease-in-out;
+
+  &:hover {
+    scale: 1.02;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+
+  svg {
+    transform: rotate(-90deg);
+    fill: $color-accent;
+  }
+}
+
+.cards_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  row-gap: 56px;
+  margin-top: 42px;
+
+  @media (max-width: $media-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+
+  button {
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 72px;
+
+    &:focus-visible {
+      box-shadow: 0 0 11px $color-accent;
+    }
+  }
+}

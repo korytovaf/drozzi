@@ -1,0 +1,36 @@
+@import "../../../styles/vars.module";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  padding: 25px 0;
+  border-top: 1px solid $color-font-grey-lite;
+}
+
+.footer_content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: $color-font-grey-lite;
+
+  @media (max-width: $media-md) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+  }
+}
+
+.footer_content_link {
+  &:focus-visible {
+    box-shadow: 0 0 11px $color-accent;
+  }
+}
+
+.footer_logo {
+  margin-top: 17px;
+  @media (max-width: $media-md) {
+    margin-top: 32px;
+  }
+}

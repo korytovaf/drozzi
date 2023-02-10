@@ -1,0 +1,21 @@
+@import "./vars.module";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  color: $color-font-main;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}

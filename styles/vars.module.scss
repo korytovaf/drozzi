@@ -1,0 +1,29 @@
+$media-xl: 1440px;
+$media-md: 764px;
+
+$color-gray: #eaeaea;
+$color-accent: #D22020;
+$color-accent-04: #d2202066;
+$color-font-invert: #ffffff;
+$color-font-main: #212529;
+$color-font-grey: #6C757D;
+$color-font-grey-lite: #ADB5BD;
+
+:export {
+  media-xl: $media-xl;
+  media-md: $media-md;
+
+  color-gray: $color-gray;
+  color-accent: $color-accent;
+  color-accent-04: $color-accent-04;
+  color-font-invert: $color-font-invert;
+  color-font-main: $color-font-main;
+  color-font-grey: $color-font-grey;
+  color-font-grey-lite: $color-font-grey-lite;
+}
+
+.container_main {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
