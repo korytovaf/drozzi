@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href='/' className={styles.logo}>
+        <Link href='/' className={styles.logo} aria-label="Переход к началу страницы">
           <Logo height={45} width={100} />
         </Link>
         <Nav />

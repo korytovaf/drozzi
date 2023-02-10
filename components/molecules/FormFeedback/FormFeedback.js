@@ -35,7 +35,7 @@ export const FormFeedback = () => {
       </div>
       <Textarea value={description} setValue={setDescription} label='Краткое описание задачи *' rows={5}/>
       <div className={styles.form_btn}>
-        <Button onClick={onSubmitForm} disabled={!isValid}>Отправить</Button>
+        <Button onClick={onSubmitForm} disabled={!isValid} aria-label='Отправить заявку'>Отправить</Button>
       </div>
     </form>
   )

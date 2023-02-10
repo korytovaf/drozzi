@@ -11,6 +11,7 @@ export const Input = ({ label, value, setValue, placeholder = ' ' }) => {
   return (
     <div className={styles.input_wrapper}>
       <input
+        aria-label={label}
         ref={inputRef}
         type="text"
         className={styles.input}

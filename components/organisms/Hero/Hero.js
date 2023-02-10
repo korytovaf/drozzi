@@ -26,17 +26,27 @@ export const Hero = () => {
         </div>
 
         <div className={styles.hero_arrow}>
-          <a href='#portfolio'>
+          <a href='#portfolio' aria-label="Просмотр раздела портфолио">
             <Arrow width={22} height={22} />
           </a>
         </div>
 
         <div className={styles.hero_messengers}>
-          <Link href='https://api.whatsapp.com/send/?phone=79505188881&text=Добрый+день, ' target='_blank' className={styles.hero_link_wrapper}>
+          <Link
+            aria-label="Написать сообщение в whatsapp"
+            href='https://api.whatsapp.com/send/?phone=79505188881&text=Добрый+день, '
+            target='_blank'
+            className={styles.hero_link_wrapper}
+          >
             <Whatsapp />
             <span>whatsapp</span>
           </Link>
-          <Link href='https://t.me/korytovaf' target='_blank' className={styles.hero_link_wrapper}>
+          <Link
+            aria-label="Написать сообщение в telegram"
+            href='https://t.me/korytovaf'
+            target='_blank'
+            className={styles.hero_link_wrapper}
+          >
             <Telegram />
             <span>telegram</span>
             </Link>

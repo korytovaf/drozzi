@@ -11,6 +11,7 @@ export const Textarea = ({ label, value, setValue, rows, placeholder = ' ' }) =>
   return (
     <div className={styles.textarea_wrapper}>
       <textarea
+        aria-label={label}
         rows={rows}
         ref={inputRef}
         className={styles.textarea}
