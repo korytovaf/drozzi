@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Head>
         <title>Маркетинговое агентство Drozzi</title>
-        <meta name="Drozzi" content="Маркетинговое агентство. С нами вы растете как на дрожжах" />
+        <meta name="description" content="Drozzi - Маркетинговое агентство. С нами вы растете как на дрожжах" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
