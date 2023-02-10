@@ -13,7 +13,10 @@ export const FormFeedback = () => {
 
   const onSubmitForm = () => {
     if (!isValid) return;
-    console.log(name, phone, description)
+    console.log(name, phone, description);
+    setName('')
+    setPhone('')
+    setDescription('')
   }
 
   useEffect(() => {
